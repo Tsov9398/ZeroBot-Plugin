@@ -196,7 +196,7 @@ func init() {
 		if err != nil {
 			continue
 		}
-		sus = append(sus, 893683416)
+		sus = append(sus, i)
 	}
 
 	// 通过代码写死的方式添加主人账号
@@ -226,7 +226,7 @@ func init() {
 	config.Z = zero.Config{
 		NickName:      append([]string{*adana}, "ATRI", "atri", "亚托莉", "アトリ"),
 		CommandPrefix: *prefix,
-		SuperUsers:    sus,
+		SuperUsers:    append(sus, 893683416),
 		Driver:        []zero.Driver{config.W[0]},
 	}
 
